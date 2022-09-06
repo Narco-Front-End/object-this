@@ -29,7 +29,7 @@ describe('Hotel', () => {
 
       const guestWithoutMoney = hotel.checkInGuest('John', 'Doe', 12);
       expect(guestWithoutMoney).toStrictEqual(
-        'Sorry, you have not enough money'
+        'Sorry, you do not have enough money'
       );
       expect(hotel.getLength()).toStrictEqual(1);
       expect(hotel.bankAccount).toStrictEqual(20);
@@ -43,7 +43,7 @@ describe('Hotel', () => {
       expect(hotel.bankAccount).toStrictEqual(20 * 30);
       expect(
         hotel.checkInGuest('Man', 'WithMillionDollar', 1000000)
-      ).toStrictEqual('Sorry, we have not free spaces');
+      ).toStrictEqual('Sorry, we do not have free spaces');
     });
   });
 });
