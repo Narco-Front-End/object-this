@@ -4,7 +4,7 @@ export const hotel = {
     bankAccount: 0,
     guests: {},
     getLength: function () {
-        return this.guests.length;
+        return Object.keys(this.guests).length;
     },
     getActualFreePlace: function () {
         return this.quantityOfPlaces - this.getLength();
