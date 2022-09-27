@@ -18,7 +18,7 @@ const hotel = {
         } else if (this.getActualFreePlace() < this.getLength()) {
             return 'Sorry, we do not have free spaces';
         } else {
-            return Object.assign({firstName, lastName, moneyQty}, this.guests, this.paidPerPlace,);
+            return Object.assign({firstName, lastName, moneyQty:moneyQty-this.priceByPlace}, this.guests, this.paidPerPlace,);
         }
     }
 }
