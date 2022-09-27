@@ -19,9 +19,7 @@ export const hotel = {
             return 'Sorry, you do not have enough money';
         } else {
             this.paidByPlace();
+            this.guests.assign(firstName, lastName,moneyQuantity)
         }
     }
 };
-
-console.log(hotel.checkInGuest());
-console.log(hotel.bankAccount);
