@@ -18,14 +18,14 @@ const hotel = {
         } else if (this.getActualFreePlace() < this.getLength()) {
             return 'Sorry, we do not have free spaces';
         } else {
-            return Object.assign({firstName, lastName, moneyQty:moneyQty-this.priceByPlace}, this.guests, this.paidPerPlace,);
+            return Object.assign({firstName, lastName, moneyQty:moneyQty-this.priceByPlace}, this.guests, this.paidPerPlace());
         }
     }
 }
 
 
 console.log(hotel.checkInGuest('Oleksii', 'Ustinov', 30));
-console.log(hotel.bankAccount);
+
 
 //
 // const objExample = {
