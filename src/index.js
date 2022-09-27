@@ -1,8 +1,8 @@
 const hotel = {
-    quantityOfPlaces: 1,
+    quantityOfPlaces: 10,
     priceByPlace: 20,
     bankAccount: 0,
-    guests: [],
+    guests: {},
     getLength: function () {
         return Object.keys(this.guests).length;
     },
@@ -18,23 +18,14 @@ const hotel = {
         } else if (this.getActualFreePlace() < this.getLength()) {
             return 'Sorry, we do not have free spaces';
         } else {
-            const guest = {
-                firstName,
-                lastName,
-                moneyQty
-            }
-            this.guests.push(guest);
-            this.paidPerPlace();
+            return Object.assign({firstName, lastName, moneyQty}, this.guests, this.paidPerPlace,);
         }
     }
 }
 
-console.log(hotel.getLength());
-hotel.checkInGuest('Oleksii', 'Ustinov', 500);
-console.log(hotel.getLength());
-console.log(hotel.guests);
-console.log(hotel.bankAccount);
 
+console.log(hotel.checkInGuest('Oleksii', 'Ustinov', 30));
+console.log(hotel.bankAccount);
 
 //
 // const objExample = {
